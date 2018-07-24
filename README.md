@@ -1,1 +1,1 @@
-# star_wars_list
+# A simple list of Star Wars characters
