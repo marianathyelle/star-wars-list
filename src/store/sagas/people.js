@@ -22,8 +22,6 @@ export function* getMorePeopleData(action) {
 
     const { results: response } = data;
 
-    console.log(response)
-
     yield put(PeopleActions.showMorePeople(response));
 
     if ( action.payload.page === 9 ) {

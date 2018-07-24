@@ -12,6 +12,7 @@ class Main extends PureComponent {
     getPeople: PropTypes.func.isRequired,
     people: PropTypes.shape({
       data: PropTypes.arrayOf(PropTypes.shape({})),
+      loadingInitial: PropTypes.bool,
     }).isRequired,
   }
 

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Creators as PeopleActions } from '../../store/ducks/people';
@@ -7,6 +8,15 @@ import { Loading, Button } from './styles';
 class Footer extends Component {
   state = {
     page: 1,
+  }
+
+  static propTypes = {
+    getMorePeople: PropTypes.func.isRequired,
+    handleGetMorePeople: PropTypes.func,
+    people: PropTypes.shape({
+      hasPeopleToShow: PropTypes.bool,
+      loading: PropTypes.bool,
+    }).isRequired,
   }
 
   handleGetMorePeople = () => {
